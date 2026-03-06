@@ -1,0 +1,26 @@
+body {
+   background-image: url('/assets/img/IMG2.jpg');
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+
+   display: flex;
+   /* flex-direction: column; */
+   /* min-height: 100vh; */
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.total-box {
+    background-color: #e9ecef;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}

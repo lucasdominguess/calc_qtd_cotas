@@ -1,0 +1,62 @@
+
+</html><!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Carteira</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body id="body">
+
+<section class="container">
+    <div class="card p-4">
+        <h2 class="text-center mb-4">Calculadora de Aportes</h2>
+
+        <div class="mb-4">
+            <label class="form-label fw-bold">Valor Total do Aporte (R$)</label>
+            <input type="number" id="valorTotal" class="form-control form-control-lg" placeholder="Ex: 3000.00" step="0.01">
+        </div>
+
+        <h5 class="mb-3">Distribuição dos Ativos</h5>
+        <div id="ativos-container">
+            </div>
+
+        <button class="btn btn-outline-secondary btn-sm mb-3" onclick="adicionarLinha()">+ Adicionar Ativo</button>
+
+        <div class="d-grid gap-2">
+            <button class="btn btn-primary" onclick="calcular()">Calcular Distribuição</button>
+        </div>
+
+        <div id="resultado" class="mt-4 d-none">
+            <hr>
+            <h4>Resultado:</h4>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped text-center">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Ticket</th>
+                            <th>% Alvo</th>
+                            <th>Cotas</th>
+                            <th>Investido</th>
+                            <th>Troco</th>
+                            <th>Dividendos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabela-resultado"></tbody>
+                </table>
+            </div>
+            <div class="total-box text-end">
+                Troco Total Acumulado: <span id="troco-total" class="text-success">R$ 0,00</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="assets/js/alerts.js"></script>
+<script src="assets/js/old_script.js"></script>
+</body>
+</html>
